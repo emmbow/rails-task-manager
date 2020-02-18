@@ -1,8 +1,13 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-xs-12">
+      <h2>Title: <%= @task.title %></h2>
+      <p>Details: <%= @task.details %></p>
+      <p>Completed? <%= @task.completed ? '✅' : '🚫' %></p>
+      <%= link_to "🔙", tasks_path %>
+      <%= link_to "✐", task_edit_path %>
+    </div>
+  </div>
+</div>
 
-<p><%= @task.completed %></p>
-<%= link_to "Back to homepage", tasks_path %>
-
-<%= link_to "Edit a task", task_edit_path %>
 
